@@ -1,25 +1,29 @@
-# generator-react-webpack-redux
-> Generator-React-Webpack - with Flux Support (using Redux)
+# React
+React is at active development state now. So, it updates very often.
+It will be very correctly to use available generators, instead of static ("boilerplate") template. This vill provide us ability to stay up-to-date with latest React development metodology. 
 
-[![Build Status](https://travis-ci.org/stylesuxx/generator-react-webpack-redux.svg?branch=master)](https://travis-ci.org/stylesuxx/generator-react-webpack-redux) ![Amount of Downloads per month](https://img.shields.io/npm/dm/generator-react-webpack-redux.svg "Amount of Downloads") [![Dependency Status](https://david-dm.org/stylesuxx/generator-react-webpack-redux.svg)](https://david-dm.org/stylesuxx/generator-react-webpack-redux) [![devDependency Status](https://david-dm.org/stylesuxx/generator-react-webpack-redux/dev-status.svg)](https://david-dm.org/stylesuxx/generator-react-webpack-redux#info=devDependencies) ![Node Version](https://img.shields.io/node/v/generator-react-webpack-redux.svg "Node Version")
+There is short definition:
 
-## What is it for?
-This generator can be used to create and manage projects that use React, Webpack and Flux (using [Redux](https://github.com/rackt/redux) as implementation). It depends on [generator-react-webpack](https://github.com/newtriks/generator-react-webpack) as a base and extends it to create new reducers and actions.
+# generator-react-webpack V2.0
 
-## What is included?
-generator-react-webpack-redux includes support for creating new reducers (and tests), as well as the creation of actions and components.
+> Yeoman generator for [ReactJS](http://facebook.github.io/react/) - lets you quickly set up a project including karma test runner and [Webpack](http://webpack.github.io/) module system.
 
-It also has support for the the features that are available in its parent project, generator-react-webpack. This includes the run-configuration, webpack, esLint and test-environment.
+# About
+Generator-React-Webpack will help you build new React projects using modern technologies.
 
-## Planned Features and updates
-There are currently some features missing from the generator. These will be available in a later version:
-
-- [ ] Add optional routing via [react-router-redux](https://github.com/rackt/react-router-redux)
+Out of the box it comes with support for:
+- Webpack
+- ES2015 via Babel-Loader
+- Different supported style languages (sass, scss, less, stylus)
+- Style transformations via PostCSS
+- Automatic code linting via esLint
+- Ability to unit test components via Karma and Mocha/Chai
 
 ## Installation
 ```bash
+# Make sure both is installed globally
 npm install -g yo
-npm install -g generator-react-webpack-redux
+npm install -g generator-react-webpack
 ```
 
 ## Setting up projects
@@ -28,46 +32,50 @@ npm install -g generator-react-webpack-redux
 mkdir my-new-project && cd my-new-project
 
 # Run the generator
-yo react-webpack-redux
+yo react-webpack
 ```
 
-## Generating new reducers
-```bash
-yo react-webpack-redux:reducer my/namespaced/reducers/name
-yo react-webpack-redux:reducer items
-```
-
-## Generating new actions
-```bash
-yo react-webpack-redux:action my/namespaced/actions/name
-yo react-webpack-redux:action items/addItem
-```
+Please make sure to edit your newly generated `package.json` file to set description, author information and the like.
 
 ## Generating new components
 ```bash
-yo react-webpack-redux:component my/namespaced/components/name
+# After setup of course :)
+# cd my-new-project
+yo react-webpack:component my/namespaced/components/name
 ```
 
-## Generating new containers
-```bash
-yo react-webpack-redux:container my/namespaced/container/Name
+The above command will create a new component, as well as its stylesheet and a basic testcase.
+
+## Generating new stateless functional components
+```
+yo react-webpack:component my/namespaced/components/name --stateless
 ```
 
 ## Usage
-Please take a look at [react-webpack-template](https://github.com/weblogixx/react-webpack-template) for an in depth explanation or use `npm run` to get a list of all commands available for building and running your application.
+The following commands are available in your project:
+```bash
+# Start for development
+npm start # or
+npm run serve
 
-Basics are:
-- `npm start`: Will start up the dev webserver
-- `npm test`: Run unit tests
-- `npm run dist`: Create the packed version
+# Start the dev-server with the dist version
+npm run serve:dist
 
-## Contribute
-Contributions are welcome. If you find something is missing or there are errors hidden somewhere, feel free to add a new issue.
+# Just build the dist version and copy static files
+npm run dist
 
-If you want to submit a pull request please to so from and against the *develop* branch.
+# Run unit tests
+npm test
+
+# Lint all files in src (also automatically done AFTER tests are run)
+npm run lint
+
+# Clean up the dist directory
+npm run clean
+
+# Just copy the static assets
+npm run copy
+```
 
 ### Running Tests
 `npm test` or `node node_modules/.bin/mocha`
-
-## License
-[MIT license](http://opensource.org/licenses/MIT)
