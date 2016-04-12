@@ -4,11 +4,11 @@ It will be very correctly to use available generators, instead of static ("boile
 
 There is short definition:
 
-# generator-react-webpack V2.0
+## generator-react-webpack V2.0
 
 > Yeoman generator for [ReactJS](http://facebook.github.io/react/) - lets you quickly set up a project including karma test runner and [Webpack](http://webpack.github.io/) module system.
 
-# About
+### About
 Generator-React-Webpack will help you build new React projects using modern technologies.
 
 Out of the box it comes with support for:
@@ -19,14 +19,14 @@ Out of the box it comes with support for:
 - Automatic code linting via esLint
 - Ability to unit test components via Karma and Mocha/Chai
 
-## Installation
+### Installation
 ```bash
 # Make sure both is installed globally
 npm install -g yo
 npm install -g generator-react-webpack
 ```
 
-## Setting up projects
+### Setting up projects
 ```bash
 # Create a new directory, and `cd` into it:
 mkdir my-new-project && cd my-new-project
