@@ -37,20 +37,6 @@ yo react-webpack
 
 Please make sure to edit your newly generated `package.json` file to set description, author information and the like.
 
-## Generating new components
-```bash
-# After setup of course :)
-# cd my-new-project
-yo react-webpack:component my/namespaced/components/name
-```
-
-The above command will create a new component, as well as its stylesheet and a basic testcase.
-
-## Generating new stateless functional components
-```
-yo react-webpack:component my/namespaced/components/name --stateless
-```
-
 ## Usage
 The following commands are available in your project:
 ```bash
