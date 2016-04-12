@@ -37,7 +37,7 @@ yo react-webpack
 
 Please make sure to edit your newly generated `package.json` file to set description, author information and the like.
 
-## Usage
+### Usage
 The following commands are available in your project:
 ```bash
 # Start for development
